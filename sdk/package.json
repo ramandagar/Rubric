@@ -1,0 +1,26 @@
+{
+  "name": "@rubric/sdk",
+  "version": "0.1.0",
+  "description": "Rubric SDK — structured epistemic context for multi-agent AI pipelines",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "peerDependencies": {},
+  "keywords": ["ai", "agents", "multi-agent", "observability", "epistemics"],
+  "license": "MIT"
+}
