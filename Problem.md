@@ -1,0 +1,4 @@
+Context Handoff Layer for AI Agents
+AI Infra
+The pain: You build a multi-agent system. Agent A does research. Agent B writes. Agent C reviews. Agent A finishes and passes its output to Agent B — as a raw text dump. Agent B has no idea what Agent A tried, what it decided not to include, what assumptions it made, what it was uncertain about. The handoff loses everything except the final output. Every multi-agent pipeline being built today has this problem. The agents are blind to each other's reasoning, not just their output.
+Why nobody built it: LangChain, CrewAI, LangGraph all handle orchestration — routing the task. Nobody handles the epistemics — routing the reasoning. It requires a new primitive: a structured "context object" that travels with a task and accumulates what each agent knew, tried, doubted, and decided. This concept doesn't exist as a library or standard yet.
